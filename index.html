@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo Final: Peter Pan</title>
     <style>
-        /* General styles */
+        /* Estilos generales */
         body {
             background-image: url('https://i.pinimg.com/736x/84/3b/fd/843bfdc70257ba986c848a762156ada0.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            font-family: 'CrayonFont', Arial, sans-serif; /* Applying crayon-like font */
+            font-family: 'CrayonFont', Arial, sans-serif; /* Aplicando fuente estilo crayón */
             color: #fff;
             margin: 0;
             padding: 0;
@@ -22,15 +22,17 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo negro transparente */
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efecto de sombra más suave */
+            position: relative; /* Establecer posición relativa para imágenes animadas */
+            overflow: hidden; /* Ocultar contenido que se desborda */
         }
         h1 {
             font-size: 48px;
             margin-bottom: 20px;
         }
-        h2 {
+        h2, h3, h4 {
             font-size: 36px;
             margin-top: 30px;
         }
@@ -38,14 +40,27 @@
             font-size: 20px;
             margin-bottom: 20px;
         }
-        /* Image styles */
+        /* Estilos de imagen */
         img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra sutil */
         }
-        /* Link styles */
+        /* Animación de movimiento toroidal solo para la imagen del oso */
+        #oso {
+            animation: moveToroide 10s linear infinite; /* Animación de movimiento toroidal */
+            position: absolute;
+        }
+        @keyframes moveToroide {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        /* Estilos de enlace */
         a {
             color: #fff;
             text-decoration: none;
@@ -54,55 +69,91 @@
         a:hover {
             text-decoration: underline;
         }
-        /* Section separator */
+        /* Separador de sección */
         hr {
             border: 0;
-            border-top: 1px solid #fff; /* White separator line */
+            border-top: 1px solid #fff; /* Línea de separador blanca */
             margin: 30px auto;
             width: 80%;
         }
-    </style>
-    <style>
-        /* Importación de la fuente */
+        /* Estilos de la lista */
+        ul {
+            text-align: left; /* Alineación izquierda del texto */
+        }
+        .gif-container {
+    display: flex; /* Use flexbox to arrange items horizontally */
+}
+
+.gif-container img {
+    max-width: 50%; /* Each image takes up 50% of the container width */
+}
+
+        /* Importación de la fuente de crayón */
         @font-face {
             font-family: 'CrayonFont';
-            src: url('images/crayon.ttf') format('truetype');
+            src: url('assets/crayon.ttf') format('truetype');
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Trabajo Final: Peter Pan</h1>
-
-        <h2>Sobre mí</h2>
-        <p>¡Hola! Me llamo Paula Mendes y soy alumna de la comisión número 3 de tecnología multimedial en la carrera de diseño multimedial. Tengo 19 años y me apasiona la creatividad en todas sus formas.</p>
-
+        <img id="oso" src="assets/oso.PNG" alt="oso">
+        <h2>¡Bienvenidos a la página explicativa!</h2>
+        <p>Este trabajo fue hecho por los integrantes:</p>
+        <ul>
+            <li>Paulita</li>
+            <li>Paula</li>
+            <li>Mendes Paula</li>
+            <p>¡Y demás alter-egos!</p>
+        </ul>
+        <h>Empecemos hablando un poco sobre mí, me llamo Paula, me gusta el arrrte. Tengo 19 años, vivo sola y tengo tres gatos. Suficiente.</h>
         <hr>
 
-        <h2 id="ilustracion">Bocetaje del Proyecto</h2>
-        <p>Desde el principio supe que quería trabajar en el trabajo N3 con la historia de 'Peter Pan'. En el TP3, intenté generar imágenes con IA, pero siempre tenían algo desconcertante, así que decidí dibujarlas yo misma. ¡Y para hacerlo aún más único, convertí a los personajes en osos y gatos!</p>
-        <img src="images/oso.PNG" alt="Imagen de ilustración">
-        <p>Esta fue la idea inicial de cómo quería que funcionara el juego:</p>
-        <img src="images/bocetaje.PNG" alt="PNG de bocetaje">
-
+        <h2 id="ilustracion">¿Por qué elegí el cuento “Peter Pan”?
+        </h2>
+        <p>Desde el vamos, amo mucho la historia de Peter Pan y como resuena en mí, específicamente la primer película que lanzaron en nombre del cuento, las haditas, todo ese rollo. ¡Soy fan! Apenas lo pensé, corrí a discord a declararlo como tomado. Como pensé que dibujar personas sería bastaaante complicado, decidí hacer que los personajes fueran animales. 
+        </p>
         <hr>
+        <h2>¿Como empezó este proyecto?</h1>
+        <p>El proyecto de Peter Pan empezó en el TP3, en el cuál nos pidieron hacer una aventura gráfica. Luego en el TP5 se nos pidió hacer un mini-juego y finalmente adherirlo a la aventura gráfica, principalmente hice un mini-juego en el que el objetivo era derribar osos desde un barco pirata que pertenecía a Garfio, el juego funcionaba pero me di cuenta que no cuadraría dentro de la aventura gráfica ya que uno juega como Wendy, asi que decidí hacer otro juego: Estrelleta, el que por falta de tiempo (procrastinación) no terminé, el juego estaba funcionando pero era más dificil de incorporar a la aventura que el primer juego: Pulga-Nator. 
+        </p>
+        <div class="gif-container">
+        <img src="assets/Pulga-nator.gif" alt="GIF de juego">
+        <img src="assets/Estrelleta.gif" alt="GIF de juego">
+    </div>
+        <p>Empecé a pensar luego de haber elegido el cuento, y lo primero que hice fue re-ver la película, y fui anotando mientras veía, las distintas opciones que podría haber, empezando así mi primer boceto del diagrama de flujo de la aventura. Luego, decidí pasarlo a draw.io, una página que nos recomendaron y quedó… un poco largo
+             </p>
+        <img src="assets/diagramalargo.gif" alt="GIF de diagrama">
+<p>El profe me hizo ver que sí, iba a ser un trabajo tedioso y aparte peor porque yo ya me había idealizado a ilustrar cada una de las pantallas, así que decidí acortarlo *sniffsniff* 
+    El diagrama de flujo terminado, fue este:
 
+    <img src="assets/diagrama.gif" alt="GIF de diagrama">
+
+</p>
+        <hr>
         <h2 id="codigo">Proceso de Dibujos</h2>
-        <p>Aunque presentaba un desafío, logré llevar a cabo el proceso de dibujos. Originalmente, la historia tendría más de 60 páginas, pero decidí reducirla por mi bienestar.</p>
-        <img src="images/titulo.gif" alt="GIF de dibujo">
-        <img src="images/nubes.gif" alt="GIF de dibujo">
-        <p>El primer diagrama de flujo se veía así, pero después de algunas correcciones, terminó viéndose así:</p>
-        <img src="images/diagrama1.png" alt="PNG de diagrama">
-        <img src="images/diagrama2.png" alt="PNG de diagrama">
-        <img src="images/diagrama3.png" alt="PNG de diagrama">
-        <img src="images/diagrama.png" alt="PNG de diagrama">
-    </div>
+        <p>Aunque presentaba un desafío, logré llevar a cabo el proceso de dibujos. Originalmente, la historia tendría más de 60 páginas, pero decidí reducirla por mi bienestar... jiji.</p>
+        <div class="gif-container">
+            <img src="assets/ilustracion.gif" alt="GIF de juego">
+            <img src="assets/portada.gif" alt="GIF de juego">
+        </div>
+        <div class="gif-container">
+            <img src="assets/ilustracion1.gif" alt="GIF de juego">
+            <img src="assets/ilustracion2.gif" alt="GIF de juego">
+        </div>
+        
+    <p>Para ilustrar, utilicé la app móvil "IbisPaintX", y un pincel con textura de crayón, para organizarme tenía en notas una larga lista de páginas por dibujar, y mientras pasaban los días hacia la entrega, iba tachando.</p>
 
-    <div>
-        <a href="#ilustracion">Ir al Bocetaje del Proyecto</a> | <a href="#codigo">Ir al Proceso de Dibujos</a>
-    </div>
-    <div>
-        <a href="tp5/juego.html">¿Quieres probarlo?</a>
-    </div>
+
+    <h2>Conclusiones</h2>
+    <h3>¿Estoy satisfecha con mi trabajo?</h3>
+    <p>Se podría decir, me gusta que siento que hice lo mejor que pude, utilicé mi creatividad y mis habilidades lo más que pude, me gustó mucho ilustrar las pantallas porque siento que eso le dió mi estilo y aparte fue terapéutico, ommm. Estoy preparada para el próximo año, dar lo mejor de mí.</p>
+    <div style="text-align: center;">
+    <img src="assets/estrella.gif" alt="GIF de juego "width="200" height="300">
+  </div>
+    <a href="#ilustracion">Ir al Bocetaje del Proyecto</a> | <a href="#codigo">Ir al Proceso de Dibujos </a> 
+        | <a href="tp5/juego.html">¿Querés probar el juego?</a>
+   
 </body>
 </html>
